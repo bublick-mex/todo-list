@@ -1,17 +1,18 @@
 .app {
     font-family: Arial, sans-serif;
-    width: 500px;
-    margin: 40px auto;
+    width: 32em;
+    margin: 2.5em auto;
   }
   
   .search-bar{
-    margin: 20px;
+    margin: 1.3em;
     margin-left: 0;
   }
 
   .searc{
-    width: 250px;
-    height: 23px;
+    width: 55%;
+    height: 1.7em;
+    display: flex;
   }
   
   p{
@@ -19,38 +20,37 @@
   }
 
   .emergency{
-    font-size: 14px;
+    font-size: 0.8em;
     background-color: #efefef;
     display:flex;
     flex-direction: column;
-    padding: 5px;
-    margin-bottom: 5px;
-    width: 90px;
+    padding: 0.3em;
+    margin-bottom: 0.1em;
+    width: 7em;
   }
   .completed{
     background-color: #efefef;
-    font-size: 14px;
-    margin-bottom: 5px;
-    padding: 5px;
+    font-size: 0.8em;
+    margin-bottom: 0.4em;
+    padding: 0.5em;
   }
 
   .todo-list {
-    font-size: 13px;
+    font-size: 0.8em;
     background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid;
-    border-radius: 2px;
-    word-wrap: break-word; 
+    padding: 1.5em;
+    border: 0.1em solid;
+    border-radius: 0.2em;
     white-space: normal;
-    margin: 10px;
-    margin-top: 0;
+    margin: 0 0.7em;
+    width: 80%;
   }
   
   .todo-item {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 0.7em;
+    border-bottom: 0.1em solid #ccc;
     word-wrap: break-word; 
     white-space: normal;
   }
@@ -68,12 +68,12 @@
   }
 
   .todo-delete-button {
-    border: 1px;
+    border: 0.1em;
     background-color: rgba(212, 0, 0, 0.985);
-    margin-left: 110px;
-    font-size: 9px;
-    width: 60px;
-    height: 24px;
+    margin-left: 6.8em;
+    font-size: 0.7em;
+    width: 7em;
+    height: 2.8em;
     color:#ffffff;
   }
 
@@ -82,19 +82,19 @@
   }
   
   .todo-name {
-    font-size: 13px;
-    width: 113px;
+    font-size: 1.1em;
+    width: 7em;
   }
   
   .todo-description {
-    font-size: 12px;
+    font-size: 1em;
     color:rgb(105, 105, 105);
-    margin: 5px;
-    width: 113px;
+    margin: 0.4em;
+    width: 7em;
   }
   
   .todo-created-at {
-    font-size: 10px;
+    font-size: 0.8em;
     color:rgb(166, 166, 166);
   }
   
@@ -102,36 +102,36 @@
     position: fixed;
     bottom: 0;
     z-index: 1000;
-    width: 505px;
-    height: 190px;
+    width: 31.6em;
+    height: 11.8em;
     background-color: #ffffffd6;
-    padding-right: 20px;
-    padding-bottom: 3px;
+    padding-right: 1.2em;
+    padding-bottom: 0.2em;
   }
 
   .input-group textarea {
     background-color: #ffffff;
-    border: 1px solid;
-    width: 313px;
-    height: 20px;
-    margin-bottom: 3px;
-    font-size: 12px;
+    border: 0.1em solid;
+    width: 26em;
+    height: 1.7em;
+    margin-bottom: 0.3em;
+    font-size: 0.95em;
   }
   
   .input2 textarea {
-    height: 50px;
+    height: 4.1em;
     overflow-wrap: break-word;
     white-space: normal;
   }
 
   .input-group button {
-    margin-left: 3px;
+    margin-left: 0.4em;
     border: none;
-    width: 70px;
-    height: 24px;
-    font-size: 9px;
+    width: 7.5em;
+    height:2.6em;
+    font-size: 0.56em;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 0;
   }
   
   .input-group button:hover {
@@ -141,27 +141,23 @@
 
   .content {
     display: flex;
-    justify-content: space-between;
+    max-width: 98%;
   }
   
   .filters {
     width: 20%;
   }
   
-  .todo-list {
-    width: 80%;
-  }
-  
   .emerg{
     background-color: #efefef;
-    margin-left: 3px;
+    margin-left: 0.3em;
     border: none;
-    width: 70px;
-    height: 24px;
-    font-size: 9px;
+    width: 4.5em;
+    height: 1.5em;
+    font-size: 0.56em;
     font-weight: bold;
-    margin-top: 0px;
-    padding: 7px;
+    margin-top: 0;
+    padding: 0.75em;
   }
 
   .button-last{
@@ -169,15 +165,40 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 5px;
-
+    padding: 0.4em;
     }
   
     .button-last button {
-      margin-bottom: 5px; 
+      margin-bottom: 0.4em; 
   }
 
   .active {
     background-color: #527dffc9; 
     color: #ffffff;
+  }
+
+  @media screen and (max-width: 32em) {
+    
+    .searc{
+      width: 55%;
+      flex-wrap: wrap;
+    }
+
+    .todo-list{
+      display: flex;
+      padding-right: 5em;
+      flex-wrap: wrap;
+      width: 60%;
+      position: relative;
+    }
+
+    .button-last{
+      align-items: flex-start;
+      padding-left: 0;
+      }
+
+    .todo-delete-button {
+      margin-left: 9em;
+    }
+
   }
