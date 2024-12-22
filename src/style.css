@@ -178,6 +178,10 @@
   }
 
   @media screen and (max-width: 32em) {
+
+    .app{
+        width: 100%;
+    }
     
     .searc{
       width: 55%;
